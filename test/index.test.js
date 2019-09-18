@@ -63,24 +63,6 @@ describe('setDayStartInterval', () => {
     });
   });
 
-  describe('error handling', () => {
-    // TODO(jeff): Figure out how to prevent the uncaught exception below from failing Jest.
-    it.skip('should not let an exception disrupt scheduling', () => {
-      intervalFn.mockImplementation(() => {
-        throw new Error('👻');
-      });
-
-      setDayStartInterval(intervalFn, { tz: 'America/Los_Angeles' });
-      expect(intervalFn).not.toHaveBeenCalled();
-
-      clock.runToLast();
-      expect(intervalFn).toHaveBeenCalled();
-
-      clock.runToLast();
-      expect(intervalFn).toHaveBeenCalled();
-    });
-  });
-
   describe('cancellation', () => {
     it('should be possible to cancel the initial fire', () => {
       const cancel = setDayStartInterval(intervalFn, { tz: 'America/Los_Angeles' });

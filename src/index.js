@@ -22,9 +22,13 @@ function setDayStartInterval(func, { tz }) {
 
   let interval;
   const timeout = setTimeout(() => {
-    // Now fire the function daily. Safety belts / micro-optimization: we register this before
-    // firing it for the first time to guarantee we schedule even if the function throws, also so as
-    // to not delay scheduling it.
+    // Now fire the function daily. Micro-optimization: we register this before firing `func` for
+    // the first time so as to not delay scheduling it.
+    //
+    // This also happens to guarantee that `setInterval` will be scheduled, although this only has
+    // the effect of actually continuing to run the interval in a browser environment, given that in
+    // Node, an uncaught exception will probably cause the process to exit. As such, this library
+    // does not attempt to guarantee that the interval will continue to run in any environment.
     interval = setInterval(func, ONE_DAY_IN_MS);
 
     // Fire the function for the first time.
