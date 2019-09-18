@@ -99,3 +99,8 @@ We welcome bug reports and feature suggestions, as well as contributions!
 
 Please add tests for any changes. You can run the tests continuously as you work by doing `env
 WATCH=true npm run test`.
+
+This project uses [ESLint](https://eslint.org) and [Prettier](https://prettier.io), so please
+make sure you maintain those standards too. You can run `npm run lint` to check their current
+status and if you follow the links above you will be able to set your editor up to show the
+status too.
