@@ -53,7 +53,7 @@ const { setDayStartInterval } = require('day-start-interval');
 
 Then, determine the user's time zone. The library can't determine when the day starts without this
 information: as of this writing, it is 2:06pm on September 18th in San Francisco, but already
-6:36am on September 18th in Adelaide, Australia!
+6:36am on September _19th_ in Adelaide, Australia!
 
 Client-side, you can use `moment-timezone` and use `moment.tz.guess()` to figure this out:
 
