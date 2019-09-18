@@ -1,6 +1,6 @@
 {
   "name": "day-start-interval",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Time-zone-aware `setInterval` that fires at the start of each day",
   "main": "src/index.js",
   "scripts": {
