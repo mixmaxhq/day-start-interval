@@ -7,6 +7,14 @@ start of each day. You might use this client-side to update a UI that shows new 
 day. You might use this server-side, from within a websocket handler, to push new information to the
 client when the day changes.
 
+```js
+setDayStartInterval(() => {
+  console.log("It's a new day on the West Coast!");
+}, {
+  tz: 'America/Los_Angeles'
+});
+```
+
 ## Installation
 
 For use from both the browser and Node:
@@ -72,6 +80,14 @@ Finally:
 setDayStartInterval(() => {
   console.log("It's a new day!");
 }, { tz });
+```
+
+If you anticipate wanting to cancel the interval, `setDayStartInterval` returns a function that
+you can call to do that:
+
+```js
+const cancel = setDayStartInterval(/* config omitted */);
+cancel();
 ```
 
 ### Does this library expect your code to actually run for more than 24 hours?
