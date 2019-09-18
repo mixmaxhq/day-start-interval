@@ -7,7 +7,9 @@ describe('setDayStartInterval', () => {
   beforeEach(() => {
     clock = lolex.install({
       // This is 8pm PDT sharp on 2019-09-17.
-      now: moment(1568775600000).tz('America/Los_Angeles').toDate()
+      now: moment(1568775600000)
+        .tz('America/Los_Angeles')
+        .toDate(),
     });
     intervalFn = jest.fn();
   });

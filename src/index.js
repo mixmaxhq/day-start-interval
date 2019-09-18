@@ -15,7 +15,10 @@ const ONE_DAY_IN_MS = moment.duration(1, 'days').asMilliseconds();
  */
 function setDayStartInterval(func, { tz }) {
   const now = moment().tz(tz);
-  const startOfTomorrow = now.clone().add(1, 'days').startOf('day');
+  const startOfTomorrow = now
+    .clone()
+    .add(1, 'days')
+    .startOf('day');
 
   // First, align to the start of the next day.
   const timeTillStartOfTomorrow = startOfTomorrow.diff(now);

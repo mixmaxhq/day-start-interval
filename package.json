@@ -26,10 +26,14 @@
   },
   "homepage": "https://github.com/mixmaxhq/day-start-interval#readme",
   "devDependencies": {
+    "@mixmaxhq/prettier-config": "^1.0.0",
     "eslint": "^6.4.0",
     "eslint-config-mixmax": "^3.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24.9.0",
-    "lolex": "^4.2.0"
+    "lolex": "^4.2.0",
+    "prettier": "^1.18.2"
   },
   "dependencies": {
     "moment-timezone": "^0.5.26"
