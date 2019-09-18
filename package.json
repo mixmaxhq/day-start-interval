@@ -1,0 +1,40 @@
+{
+  "name": "day-start-interval",
+  "version": "1.0.0",
+  "description": "Time-zone-aware `setInterval` that fires at the start of each day",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "[[ ! -z \"$WATCH\" ]] && jest --watch || jest",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run test",
+    "prepublishOnly": "npm run ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixmaxhq/day-start-interval.git"
+  },
+  "keywords": [
+    "setInterval",
+    "time",
+    "zone",
+    "moment",
+    "daily"
+  ],
+  "author": "Jeff Wear <jeffreywear@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mixmaxhq/day-start-interval/issues"
+  },
+  "homepage": "https://github.com/mixmaxhq/day-start-interval#readme",
+  "devDependencies": {
+    "@mixmaxhq/prettier-config": "^1.0.0",
+    "eslint": "^6.4.0",
+    "eslint-config-mixmax": "^3.4.0",
+    "jest": "^24.9.0",
+    "lolex": "^4.2.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "moment-timezone": "^0.5.26"
+  }
+}
