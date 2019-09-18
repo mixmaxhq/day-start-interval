@@ -6,7 +6,8 @@
   "scripts": {
     "test": "[[ ! -z \"$WATCH\" ]] && jest --watch || jest",
     "lint": "eslint .",
-    "ci": "npm run lint && npm run test"
+    "ci": "npm run lint && npm run test",
+    "prepublishOnly": "npm run ci"
   },
   "repository": {
     "type": "git",
